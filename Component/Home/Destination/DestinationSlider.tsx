@@ -5,7 +5,7 @@ import React from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-type Props = {}
+
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -24,7 +24,7 @@ const responsive = {
   }
 };
 
-const DestinationSlider = (props: Props) => {
+const DestinationSlider = () => {
   return (
     <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={5000} keyBoardControl={true}>
         {
