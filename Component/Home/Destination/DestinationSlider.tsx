@@ -1,0 +1,57 @@
+"use client"
+import { destinationData } from '@/Data/data';
+import Image from 'next/image';
+import React from 'react'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+type Props = {}
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 5,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1324, min: 764 },
+    items: 2,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 764, min: 0 },
+    items: 1,
+    slidesToSlide: 1 // optional, default to 1.
+  }
+};
+
+const DestinationSlider = (props: Props) => {
+  return (
+    <Carousel responsive={responsive} infinite={true} autoPlay={true} autoPlaySpeed={5000} keyBoardControl={true}>
+        {
+            destinationData.map((item)=>{
+                return <div key={item.id} className='m-3'>
+                    <div className='relative h-[400px]'>
+                        <div className='absolute inset-0 bg-black opacity-25 rounded-lg'>
+                            {/* {image} */}
+                            
+                        </div>
+                       <div style={{ position: "relative", width: "100%", height: "100%" }}>
+  <Image
+    src={item.image}
+    alt={item.country}
+    fill
+    style={{ objectFit: "cover" }}
+  />
+   
+</div>
+                    </div>
+                    <h1 className='text-lg font-semibold mt-4'>{item.country}</h1>
+                    <p className='mt-2 text-sm '>{item.travelers}  Travellers</p>
+                </div>
+            })
+        }
+    </Carousel>
+  )
+}
+
+export default DestinationSlider
