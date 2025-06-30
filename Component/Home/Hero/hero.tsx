@@ -2,9 +2,9 @@ import Searchbox from '@/Component/Helper/searchbox'
 import Link from 'next/link'
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <div className='relative w-full h-[120vh] sm:h-[100vh]'>
         {/* {overlay} */}

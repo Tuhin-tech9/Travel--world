@@ -3,9 +3,9 @@ import { hotelsData } from '@/Data/data'
 import React from 'react'
 import Hotelcard from './hotelcard'
 
-type Props = {}
+// type Props = {}
 
-const Hotel = (props: Props) => {
+const Hotel = () => {
   return (
     <div className='pt-20 pb-20'>
         <SectionHotel/>

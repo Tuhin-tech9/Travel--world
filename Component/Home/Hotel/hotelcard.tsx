@@ -30,7 +30,7 @@ const Hotelcard = ({hotel}: Props) => {
               width={500}
               height={500}
               className='overflow-hidden w-full h-full transition-all duration-300 object-cover group-hover:scale-110'
-            />
+           alt=''  />
         </div>
         <div>
           {/* {content} */}

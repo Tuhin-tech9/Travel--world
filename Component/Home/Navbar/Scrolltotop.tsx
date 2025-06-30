@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import { FaArrowDown, FaArrowUp } from 'react-icons/fa'
+import {  FaArrowUp } from 'react-icons/fa'
 
 const Scrolltotop = () => {
     const [isvisble,setIsvisible]=useState(false)
@@ -31,7 +31,7 @@ const Scrolltotop = () => {
             isvisble && (
               <button
                 className='bg-rose-500 rounded-full text-white w-12 h-8 flex items-center justify-center focus:outline-none '
-                
+                title="Scroll to top"
                 onClick={scrolltotop}
               >
                 <FaArrowUp/>

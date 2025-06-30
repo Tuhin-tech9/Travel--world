@@ -8,9 +8,9 @@ import { TiSocialInstagram } from "react-icons/ti";
 
 
 
-type Props = {
+// type Props = {
     
-}
+// }
 
 const Footer = () => {
   return (
